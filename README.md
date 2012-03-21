@@ -1,5 +1,5 @@
 Function: 
-  Simulate instance online web development such as jsbin or jsfiddle
+  Simulate instant online web development such as jsbin or jsfiddle
 
 Reference: 
   http://net.tutsplus.com/
