@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>WebDevSimulator</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<a target="blank" href="https://github.com/LeoAJ"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://a248.e.akamai.net/assets.github.com/img/7afbc8b248c68eb468279e8c17986ad46549fb71/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub"></a>
+	<div class="container grid">
+		<form>
+			<h2>HTML</h2>
+			<textarea id="html"></textarea>
+			<h2>CSS</h2>
+			<textarea id="css"></textarea>
+		</form>
+	</div>
+	<div class="output grid">
+		<iframe></iframe>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		(function() {
+			$('.grid').height($(window).height());
+
+			var contents = $('iframe').contents()
+				body = contents.find('body'),
+				style = $('<style></style>').appendTo(contents.find('head'));
+
+			console.log(style);	
+			$('textarea').on('keyup', function() {
+				var $this = $(this);
+
+				if ($this.attr('id') === 'html') {
+					body.html($this.val());
+				} else {
+					style.text($this.val());
+				}
+			});
+		})();
+	</script>
+</body>
+</html>
