@@ -1,8 +1,10 @@
-Function: 
+# Web Dev Simulator
+
+### Function: 
   Simulate instant online web development such as jsbin or jsfiddle
 
-Reference: 
+### Reference: 
   http://net.tutsplus.com/
 
-Thanks:
-  Best webDev evangelist: Jeffrey Way
+### Thanks:
+  The best webDev evangelist: Jeffrey Way
